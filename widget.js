@@ -240,7 +240,7 @@
       resList.textContent = `${candidateData.listName} (Record #${candidateData.recNo})`;
       resFather.textContent = candidateData.fatherName;
       resMother.textContent = candidateData.motherName;
-      resCategory.textContent = candidateData.category;
+      if (resCategory) resCategory.textContent = candidateData.category;
 
       qualifiedView.style.display = 'block';
 
