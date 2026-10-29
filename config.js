@@ -11,8 +11,8 @@
  */
 
 window.CONFIG = {
-  // Paste your Google Apps Script Web App URL or Deployment ID here:
-  GOOGLE_SCRIPT_URL: "",
+  // Active Google Apps Script Web App URL:
+  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzUQwW0rAb_3VKPAQy50L5e02O5HOqW-o9veNpXGp2FcnO9D7TYdyVaaixrJ7vWzgQX/exec",
 
   // Google Sheet Link (for reference)
   SHEET_URL: "https://docs.google.com/spreadsheets/d/18p73GRMu5fOb6xOKzSQkGRRNrxdQdBv4i9Hw00b1BZA/edit?gid=0#gid=0",
