@@ -67,30 +67,20 @@ window.CONFIG = {
 Run these commands in PowerShell or Terminal inside this folder:
 
 ```bash
-# 1. Initialize git (if not already done)
-git init
+# 1. Link your GitHub repository
+git remote add origin https://github.com/testbook-website/SSC-CPO-RESULT-CHECKER.git
 
-# 2. Add all files
-git add .
-
-# 3. Commit
-git commit -m "Initial commit: SSC CPO Result Checker with 10676 candidates and Apps Script"
-
-# 4. Link your GitHub repository (replace with your repo URL)
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/ssc-cpo-result.git
-
-# 5. Push to GitHub
+# 2. Push to GitHub
 git push -u origin main
 ```
 
 #### Enable Free GitHub Pages:
-1. Go to your repository on GitHub: `https://github.com/YOUR_USERNAME/ssc-cpo-result`.
+1. Go to your repository on GitHub: `https://github.com/testbook-website/SSC-CPO-RESULT-CHECKER`.
 2. Click **Settings** (tab at top) > **Pages** (in left sidebar).
 3. Under **Branch**, select `main` branch and `/ (root)` folder.
 4. Click **Save**.
 5. After 30 seconds, your widget will be live at:
-   `https://YOUR_USERNAME.github.io/ssc-cpo-result/`
+   `https://testbook-website.github.io/SSC-CPO-RESULT-CHECKER/`
 
 ---
 
@@ -101,7 +91,7 @@ Paste this HTML code anywhere in your WordPress post/page (using a "Custom HTML"
 ```html
 <!-- SSC CPO 2025 Result Checker Embed -->
 <iframe 
-  src="https://YOUR_USERNAME.github.io/ssc-cpo-result/" 
+  src="https://testbook-website.github.io/SSC-CPO-RESULT-CHECKER/" 
   width="100%" 
   height="720" 
   style="border: none; border-radius: 16px; max-width: 600px; display: block; margin: 20px auto; box-shadow: 0 15px 35px rgba(0,0,0,0.25);" 
