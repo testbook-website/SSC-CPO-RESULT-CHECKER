@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SSC CPO 2025 PST/PET Result Checker | Qualified List Paper-II</title>
+  <meta name="description" content="Official SSC CPO Result Checker 2025. Check if your roll number has qualified in PST/PET for appearing in Paper-II exam (Delhi Police & CAPFs).">
+  <meta name="keywords" content="SSC CPO Result 2025, SSC CPO PST PET Result, SSC CPO Paper 2 Qualified List, SSC Result Checker">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow top" aria-hidden="true"></div>
+  <div class="ambient-glow bottom" aria-hidden="true"></div>
+
+  <!-- Confetti Canvas for Celebration -->
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <div class="widget-wrapper">
+    <div class="widget-card">
+      
+      <!-- Widget Header -->
+      <header class="widget-header">
+        <div class="top-bar">
+          <div class="official-badge">
+            <span class="flag-icon">🇮🇳</span> SSC OFFICIAL EXAM RESULT
+          </div>
+          <button id="btnSettings" class="settings-btn" title="Google Sheet Integration Settings" aria-label="Settings">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <h1 class="title">SSC CPO Result Checker</h1>
+        <p class="subtitle">SI in Delhi Police & CAPFs Examination (PST / PET Stage)<br>Qualified Candidates for Paper-II</p>
+
+        <!-- Stats summary -->
+        <div class="stats-pills">
+          <span class="stat-pill all">✓ 10,676 Qualified</span>
+          <span class="stat-pill female">👩 510 Female</span>
+          <span class="stat-pill male">👨 10,166 Male</span>
+        </div>
+      </header>
+
+      <!-- Widget Body -->
+      <main class="widget-body">
+        
+        <!-- Input Form View -->
+        <form id="resultForm" class="result-form" novalidate>
+          
+          <!-- Candidate Name -->
+          <div class="form-group">
+            <label for="inputName" class="form-label">
+              <span>Full Name</span>
+              <span class="label-hint">As in Admit Card</span>
+            </label>
+            <div class="input-container">
+              <span class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <input 
+                type="text" 
+                id="inputName" 
+                class="form-input" 
+                placeholder="Enter your full name" 
+                autocomplete="name" 
+                required
+              >
+            </div>
+            <div id="nameError" class="field-error">Please enter your name</div>
+          </div>
+
+          <!-- Roll Number -->
+          <div class="form-group">
+            <label for="inputRoll" class="form-label">
+              <span>12-Digit Roll Number</span>
+              <span id="rollCounter" class="label-hint">0 / 12 digits</span>
+            </label>
+            <div class="input-container">
+              <span class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <line x1="6" y1="8" x2="6" y2="8"></line>
+                  <line x1="10" y1="8" x2="10" y2="8"></line>
+                  <line x1="14" y1="8" x2="14" y2="8"></line>
+                  <line x1="18" y1="8" x2="18" y2="8"></line>
+                  <line x1="6" y1="12" x2="18" y2="12"></line>
+                  <line x1="6" y1="16" x2="18" y2="16"></line>
+                </svg>
+              </span>
+              <input 
+                type="tel" 
+                id="inputRoll" 
+                class="form-input mono" 
+                placeholder="e.g. 125130000530" 
+                maxlength="14" 
+                autocomplete="off" 
+                required
+              >
+            </div>
+            <div id="rollError" class="field-error">Please enter a valid 12-digit roll number</div>
+          </div>
+
+          <!-- Mobile Number -->
+          <div class="form-group">
+            <label for="inputMobile" class="form-label">
+              <span>Mobile Number</span>
+              <span class="label-hint">For result updates</span>
+            </label>
+            <div class="input-container phone-wrapper">
+              <span class="phone-prefix">+91</span>
+              <input 
+                type="tel" 
+                id="inputMobile" 
+                class="form-input phone-input mono" 
+                placeholder="9876543210" 
+                maxlength="10" 
+                autocomplete="tel" 
+                required
+              >
+            </div>
+            <div id="mobileError" class="field-error">Please enter a valid 10-digit mobile number</div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="btnSubmit" class="btn-submit">
+            <span class="btn-text">Check Result</span>
+            <span class="btn-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <!-- View 1: QUALIFIED Result Screen -->
+        <div id="qualifiedView" class="result-view" aria-live="polite">
+          <div class="card-qualified">
+            <div class="status-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              QUALIFIED IN PST / PET
+            </div>
+            <h2 class="qualified-heading">🎉 Congratulations!</h2>
+            <p class="qualified-sub">You have successfully qualified in PST/PET and are shortlisted for appearing in Paper-II.</p>
+
+            <div class="details-grid">
+              <div class="detail-item full-width">
+                <span class="detail-key">Candidate Name (Official)</span>
+                <span id="resName" class="detail-val highlight">--</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-key">Roll Number</span>
+                <span id="resRoll" class="detail-val mono">--</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-key">Exam List</span>
+                <span id="resList" class="detail-val">--</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-key">Father's Name</span>
+                <span id="resFather" class="detail-val">--</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-key">Mother's Name</span>
+                <span id="resMother" class="detail-val">--</span>
+              </div>
+              <div class="detail-item full-width">
+                <span class="detail-key">Category (CAT1 / CAT2 / CAT3)</span>
+                <span id="resCategory" class="detail-val">--</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="btnPrint" class="btn-secondary" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              Print / Save Result Slip
+            </button>
+            <button id="btnShare" class="btn-secondary btn-whatsapp" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.533 1.879.816 3.149.816 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.658-5.767-5.658zm3.385 8.169c-.145.408-.737.766-1.025.799-.277.032-.638.144-2.072-.451-1.701-.703-2.771-2.454-2.856-2.568-.085-.114-.688-.916-.688-1.748 0-.832.434-1.242.588-1.401.154-.159.336-.198.448-.198.112 0 .224 0 .322.006.104.006.244-.039.382.293.145.349.497 1.214.541 1.303.044.089.073.193.015.308-.059.115-.088.188-.175.291-.088.104-.185.231-.264.31-.089.088-.182.185-.078.363.104.178.461.761.99 1.233.681.608 1.256.797 1.434.886.178.089.282.074.386-.045.105-.119.447-.52.566-.699.119-.178.238-.149.402-.089.164.06 1.042.491 1.221.58.178.089.297.134.341.208.045.074.045.431-.1 1.039z"></path>
+              </svg>
+              Share on WhatsApp
+            </button>
+            <button id="btnRecheckQ" class="btn-secondary" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              Check Another Roll Number
+            </button>
+          </div>
+        </div>
+
+        <!-- View 2: NOT QUALIFIED Result Screen -->
+        <div id="notQualifiedView" class="result-view" aria-live="polite">
+          <div class="card-not-qualified">
+            <div class="status-badge not-qual">
+              RESULT STATUS
+            </div>
+            <div class="nq-icon">📋</div>
+            <h2 class="nq-heading">Roll Number Not Found</h2>
+            <p class="nq-sub">
+              Roll Number <strong id="nqRoll" class="mono" style="color: #ffffff;">--</strong> was not found in the list of candidates shortlisted in PST/PET for appearing in Paper-II.
+            </p>
+            <div class="nq-tips">
+              <strong>Please Note:</strong>
+              <ul>
+                <li>Verify your 12-digit roll number from your official SSC admit card.</li>
+                <li>Make sure there are no typing mistakes.</li>
+                <li>Check official cut-off marks and category-wise lists on ssc.gov.in.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="btnRecheckNQ" class="btn-secondary" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              Try Another Roll Number
+            </button>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="widget-footer">
+        Official SSC CPO SI Exam Data • List-1 (Female) & List-2 (Male) Verified
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Settings Modal (For Deployment ID / Google Sheet Connection) -->
+  <div id="settingsModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">Google Sheet Integration</h3>
+        <button id="btnCloseModal" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div id="sheetStatusIndicator" class="status-indicator not-connected">
+        <span class="status-dot">●</span>
+        <span id="statusIndicatorText">Checking connection...</span>
+      </div>
+
+      <p class="modal-desc">
+        Submissions (Student Name, Roll Number, Mobile Number, and Result Status) are logged automatically into your Google Sheet.
+      </p>
+
+      <div class="form-group">
+        <label for="inputDeploymentId" class="form-label">
+          <span>Web App URL or Deployment ID</span>
+        </label>
+        <input 
+          type="text" 
+          id="inputDeploymentId" 
+          class="form-input mono" 
+          placeholder="Paste Deployment ID or https://script.google.com/macros/s/.../exec"
+        >
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-top: 16px;">
+        <button id="btnSaveDeployment" class="btn-submit" style="margin-top: 0; flex: 1;">Save & Test</button>
+        <a id="btnOpenSheet" href="https://docs.google.com/spreadsheets/d/18p73GRMu5fOb6xOKzSQkGRRNrxdQdBv4i9Hw00b1BZA/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex: 1; text-decoration: none;">
+          Open Sheet ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Candidates Data First (10,676 records) -->
+  <script src="candidates_data.js"></script>
+  <!-- Load Configuration -->
+  <script src="config.js"></script>
+  <!-- Load Widget Logic -->
+  <script src="widget.js"></script>
+
+</body>
+</html>

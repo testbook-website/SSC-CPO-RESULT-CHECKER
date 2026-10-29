@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Scratch & test scripts
+inspect_pdf.js
+check_cols.js
+compact_data.js
+generate_dataset.js
+serve.js
+test_*.js
+verify_all.js
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.log
