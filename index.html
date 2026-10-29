@@ -35,7 +35,7 @@
         </div>
 
         <h1 class="title">SSC CPO Result Checker</h1>
-        <p class="subtitle">SI in Delhi Police & CAPFs Examination (PST / PET Stage)<br>Qualified Candidates for Paper-II</p>
+        <p class="subtitle">SI in Delhi Police & CAPFs • PST/PET Stage for Paper-II</p>
 
         <!-- Stats summary -->
         <div class="stats-pills">
@@ -142,7 +142,7 @@
           <!-- Disclaimer -->
           <div class="disclaimer-box">
             <span class="disclaimer-icon">⚠️</span>
-            <span><strong>Disclaimer:</strong> This is not an official result checker. Candidates are advised to check <a href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer">ssc.gov.in</a> for official results and confirmation.</span>
+            <span><strong>Disclaimer:</strong> Not an official checker. Verify results at <a href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer">ssc.gov.in</a>.</span>
           </div>
         </form>
 
@@ -150,13 +150,13 @@
         <div id="qualifiedView" class="result-view" aria-live="polite">
           <div class="card-qualified">
             <div class="status-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
               QUALIFIED IN PST / PET
             </div>
-            <h2 class="qualified-heading">🎉 Congratulations!</h2>
-            <p class="qualified-sub">You have successfully qualified in PST/PET and are shortlisted for appearing in Paper-II.</p>
+            <h2 class="qualified-heading">🎉 Qualified!</h2>
+            <p class="qualified-sub">Shortlisted for appearing in Paper-II exam.</p>
 
             <div class="details-grid">
               <div class="detail-item full-width">
@@ -180,35 +180,31 @@
                 <span id="resMother" class="detail-val">--</span>
               </div>
             </div>
-
-            <!-- Disclaimer on result card -->
-            <div class="disclaimer-box" style="margin-top: 14px;">
-              <span class="disclaimer-icon">ℹ️</span>
-              <span><strong>Note:</strong> This is not an official result checker. Please verify with the official list on <a href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer">ssc.gov.in</a>.</span>
-            </div>
           </div>
 
           <div class="action-buttons">
-            <button id="btnPrint" class="btn-secondary" type="button">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-                <rect x="6" y="14" width="12" height="8"></rect>
-              </svg>
-              Print / Save Result Slip
-            </button>
-            <button id="btnShare" class="btn-secondary btn-whatsapp" type="button">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.533 1.879.816 3.149.816 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.658-5.767-5.658zm3.385 8.169c-.145.408-.737.766-1.025.799-.277.032-.638.144-2.072-.451-1.701-.703-2.771-2.454-2.856-2.568-.085-.114-.688-.916-.688-1.748 0-.832.434-1.242.588-1.401.154-.159.336-.198.448-.198.112 0 .224 0 .322.006.104.006.244-.039.382.293.145.349.497 1.214.541 1.303.044.089.073.193.015.308-.059.115-.088.188-.175.291-.088.104-.185.231-.264.31-.089.088-.182.185-.078.363.104.178.461.761.99 1.233.681.608 1.256.797 1.434.886.178.089.282.074.386-.045.105-.119.447-.52.566-.699.119-.178.238-.149.402-.089.164.06 1.042.491 1.221.58.178.089.297.134.341.208.045.074.045.431-.1 1.039z"></path>
-              </svg>
-              Share on WhatsApp
-            </button>
+            <div class="btn-row">
+              <button id="btnPrint" class="btn-secondary" type="button" title="Print Slip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                Print Slip
+              </button>
+              <button id="btnShare" class="btn-secondary btn-whatsapp" type="button" title="Share WhatsApp">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.533 1.879.816 3.149.816 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.658-5.767-5.658zm3.385 8.169c-.145.408-.737.766-1.025.799-.277.032-.638.144-2.072-.451-1.701-.703-2.771-2.454-2.856-2.568-.085-.114-.688-.916-.688-1.748 0-.832.434-1.242.588-1.401.154-.159.336-.198.448-.198.112 0 .224 0 .322.006.104.006.244-.039.382.293.145.349.497 1.214.541 1.303.044.089.073.193.015.308-.059.115-.088.188-.175.291-.088.104-.185.231-.264.31-.089.088-.182.185-.078.363.104.178.461.761.99 1.233.681.608 1.256.797 1.434.886.178.089.282.074.386-.045.105-.119.447-.52.566-.699.119-.178.238-.149.402-.089.164.06 1.042.491 1.221.58.178.089.297.134.341.208.045.074.045.431-.1 1.039z"></path>
+                </svg>
+                WhatsApp
+              </button>
+            </div>
             <button id="btnRecheckQ" class="btn-secondary" type="button">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="1 4 1 10 7 10"></polyline>
                 <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
               </svg>
-              Check Another Roll Number
+              Check Another Roll
             </button>
           </div>
         </div>
@@ -217,32 +213,21 @@
         <div id="notQualifiedView" class="result-view" aria-live="polite">
           <div class="card-not-qualified">
             <div class="status-badge not-qual">
-              RESULT STATUS
+              NOT FOUND
             </div>
             <div class="nq-icon">📋</div>
             <h2 class="nq-heading">Roll Number Not Found</h2>
             <p class="nq-sub">
-              Roll Number <strong id="nqRoll" class="mono" style="color: #881337;">--</strong> was not found in the list of candidates shortlisted in PST/PET for appearing in Paper-II.
+              Roll <strong id="nqRoll" class="mono" style="color: #881337;">--</strong> was not shortlisted in PST/PET for Paper-II.
             </p>
             <div class="nq-tips">
-              <strong>Please Note:</strong>
-              <ul>
-                <li>Verify your 12-digit roll number from your official SSC admit card.</li>
-                <li>Make sure there are no typing mistakes.</li>
-                <li>Check official cut-off marks and category-wise lists on ssc.gov.in.</li>
-              </ul>
-            </div>
-
-            <!-- Disclaimer on not-qualified card -->
-            <div class="disclaimer-box" style="margin-top: 14px;">
-              <span class="disclaimer-icon">⚠️</span>
-              <span><strong>Disclaimer:</strong> This is not an official result checker. Candidates are advised to check <a href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer">ssc.gov.in</a> for official confirmation.</span>
+              <strong>Check your admit card:</strong> Verify your 12-digit roll number and check cut-off marks at <a href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer">ssc.gov.in</a>.
             </div>
           </div>
 
           <div class="action-buttons">
             <button id="btnRecheckNQ" class="btn-secondary" type="button">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="1 4 1 10 7 10"></polyline>
                 <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
               </svg>
@@ -255,7 +240,7 @@
 
       <!-- Footer -->
       <footer class="widget-footer">
-        Disclaimer: This is not an official result checker. Candidates are advised to verify all results at <a href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer">ssc.gov.in</a>
+        Disclaimer: Not an official checker. Official results at <a href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer">ssc.gov.in</a>
       </footer>
 
     </div>

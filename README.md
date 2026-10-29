@@ -89,12 +89,12 @@ git push -u origin main
 Paste this HTML code anywhere in your WordPress post/page (using a "Custom HTML" block) or on any webpage:
 
 ```html
-<!-- SSC CPO 2025 Result Checker Embed -->
+<!-- SSC CPO 2025 Result Checker Embed (Compact Widget) -->
 <iframe 
   src="https://testbook-website.github.io/SSC-CPO-RESULT-CHECKER/" 
   width="100%" 
-  height="720" 
-  style="border: none; border-radius: 16px; max-width: 600px; display: block; margin: 20px auto; box-shadow: 0 15px 35px rgba(0,0,0,0.25);" 
+  height="490" 
+  style="border: none; border-radius: 14px; max-width: 420px; display: block; margin: 16px auto; box-shadow: 0 4px 20px rgba(0,0,0,0.08);" 
   loading="lazy" 
   title="SSC CPO Result Checker 2025"
   allowtransparency="true">
